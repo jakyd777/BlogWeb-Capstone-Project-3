@@ -1,0 +1,24 @@
+{
+  "name": "capstone-project-3-blogweb",
+  "version": "1.0.0",
+  "description": "BlogWeb page 1.0.0 for Capstone project The Complete 2024 Web Development Bootcamp",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jakyd777/Capstone-Project-3-BlogWeb.git"
+  },
+  "author": "jakyd777",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jakyd777/Capstone-Project-3-BlogWeb/issues"
+  },
+  "homepage": "https://github.com/jakyd777/Capstone-Project-3-BlogWeb#readme",
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.18.2"
+  }
+}
