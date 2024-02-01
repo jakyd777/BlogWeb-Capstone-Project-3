@@ -11,9 +11,34 @@
     background-color: azure;
 }
 
+.button {
+    background-color: purple; /* Green */
+    border: 2px solid purple;
+    border-radius: 10px;
+    color: white;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+  
+  .button:hover {
+    background-color: white;
+    color: purple;
+  }
+
+.footer-text {
+    color: purple;
+}
+
 @media (max-width: 576px) {
     img.rounded-circle {
         width: 24px;
         height: 24px;
     }
 }
+
