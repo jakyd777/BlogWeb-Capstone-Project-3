@@ -19,21 +19,22 @@
     <div class="container px-4 py-4" id="hanging-icons">
       <h2 class="pb-2">Read My <br/><span class="h2-features">Blog Posts</span></h2>
       <div class="row g-4 pt-4 row-cols-1 row-cols-lg-2">
-        <div class="col d-flex align-items-start">
-          <div>
-            <h3 class="fs-2 text-body-emphasis">First Post on Blog</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-            <button type="button" class="button">See more</button>
-          </div>
-          
-        </div>
-        <div class="col d-flex align-items-start">
-          <div>
-            <h3 class="fs-2 text-body-emphasis">Second Post on Blog</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-            <button type="button" class="button">See more</button>  
-        </div>
-        </div>          
+        <% if (locals.posts) { %>            
+            <% posts.forEach((post) => { %>
+                <div class="col d-flex align-items-start">
+                    <div>
+                      <h3 class="fs-2 text-body-emphasis"><%= post.title %></h3>
+                      <p><%= post.subtitle %></p>
+                      <p>Author: <%= post.author %></p>
+                      <form action = "/article" method = "post">
+                          <input type="hidden" id="postNum" name="postNum" value="<%= posts.indexOf(post) %>" />
+                          <button type="submit" class="button">See more</button>
+                      </form>
+                    </div>          
+                  </div>
+            <% })} %>
+     
+
       </div>
     </div>
   </section>

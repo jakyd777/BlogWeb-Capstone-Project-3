@@ -1,0 +1,42 @@
+<%- include("partials/header.ejs") %>
+
+<section class="article-head">
+    <div class="container col-xxl-8 px-4 pb-0">
+      <div class="row flex-lg-row-reverse align-items-center g-5 pt-5 pb-0">
+        <div class="col-10 col-sm-8 col-lg-6">
+          <img src="images/man-foto.jpg" class="d-block mx-lg-auto img-fluid" alt="Foto" height="300" loading="lazy">
+        </div>
+        <div class="col-lg-6">
+          <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3"><span class="h1-title"><%= title %></h1>
+          <p class="lead"><%= subtitle  %>></p>        
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <section id="article-body">
+    <div class="container px-4 py-4" id="hanging-icons">
+      <!--<h2 class="pb-2">Read My <br/><span class="h2-features">Blog Posts</span></h2>-->
+      <div class="row g-4 pt-4 row-cols-1">
+                    
+           
+                <div class="col d-flex align-items-start">
+                    <div>
+                      <h3 class="fs-2 text-body-emphasis"><%= title %></h3>
+                      <p><%= subtitle %></p>
+                      <p>Author: <%= author %></p>
+                      <!--<form action = "/post" method = "post">
+                          <input type="hidden" id="postNum" name="postNum" value=<%# posts.indexOf(post) %> />
+                          <button type="button" class="button">See more</button>
+                      </form> -->
+                    </div>          
+                  </div>
+            <%# })} %>
+     
+
+      </div>
+    </div>
+  </section>
+
+<%- include("partials/footer.ejs") %>
