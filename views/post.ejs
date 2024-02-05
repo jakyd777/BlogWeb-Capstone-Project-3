@@ -1,0 +1,22 @@
+<%- include("partials/header.ejs") %>
+<main>
+
+        <section id="qualification">
+            <div class="container px-4 py-4" id="hanging-icons">
+            <%if (locals.post) { %>
+              <h2 class="pb-2">Post title <br/><span class="h2-features"><%= post.title %></span></h2>
+                <div class="row g-4 pt-4 row-cols-1">                                    
+                    <div class="col d-flex align-items-start px-5">
+                            <div>
+                              <p style="text-align: justify"><%- post.content %></p>  
+                              <p><%= post.date %></p> 
+                              <a href="/delete/<%= postIndex%>"><button class="btn btn-primary">Delete</button> </a>
+                              <a href="/update/<%= postIndex%>"><button class="btn btn-primary">Update</button> </a>
+                            </div>
+                          </div>                              
+                </div>
+            <% } %> 
+            </div>
+          </section>
+</main>
+<%- include("partials/footer.ejs") %>

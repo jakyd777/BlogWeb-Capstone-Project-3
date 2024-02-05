@@ -1,0 +1,55 @@
+<%- include("partials/header.ejs") %>
+<main>
+    <section id="qualification">
+        <div class="container px-4 py-4 col-6 align-items-center">
+            <% if (locals.post) { %>
+            <h2 class="pb-2">Update <br/><span class="h2-features">Post</span></h2>
+            <form action="/save/<%= postIndex %>" method="post">
+                <div class="row align-items-center">
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">Post Title</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="1" name="title"><%= post.title %></textarea>
+                    </div>
+                </div>
+                <div class="row align-items-center">
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">Post Subtitle</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="subtitle"><%= post.subtitle %></textarea>
+                    </div>
+                </div>
+                <div class="row align-items-center">
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">Post Content</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="8" name="content"><%= post.content %></textarea>
+                    </div>
+                </div>
+                <input class="btn btn-primary" type="submit" value="Save Post">
+            </form>
+            <% } else { %>
+                <h2 class="pb-2">Create <br/><span class="h2-features">New Post</span></h2>
+                <form action="/save/-1" method="post">
+                    <div class="row align-items-center">
+                        <div class="mb-3">
+                            <label for="exampleFormControlTextarea1" class="form-label">Post Title</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="1" name="title"></textarea>
+                        </div>
+                    </div>
+                    <div class="row align-items-center">
+                        <div class="mb-3">
+                            <label for="exampleFormControlTextarea1" class="form-label">Post Subtitle</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="subtitle"></textarea>
+                        </div>
+                    </div>
+                    <div class="row align-items-center">
+                        <div class="mb-3">
+                            <label for="exampleFormControlTextarea1" class="form-label">Post Content</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="8" name="content"></textarea>
+                        </div>
+                    </div>
+                    <input class="btn btn-primary" type="submit" value="Save Post">
+                </form>
+            <% } %>  
+        </div>
+    </section>
+</main>
+<%- include("partials/footer.ejs") %>
